@@ -13,6 +13,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        use_sql_comments: true # 쿼리에 어떤 기능인지 주석을 달아줌 (보완)
 
 server:
   servlet:
@@ -20,3 +21,8 @@ server:
       charset: UTF-8
       enabled: true
       force: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
